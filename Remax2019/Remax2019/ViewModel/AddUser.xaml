@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="Remax2019.AddUser"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Remax2019"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1100">
+    <Grid>
+        <TextBox  materialDesign:HintAssist.Hint="Enter your full name" x:Name="FullName" Margin="32,-12,833,716"/>
+
+        <TextBox materialDesign:HintAssist.Hint="Enter Username ( 5 - 20 Characters)"  x:Name="UserName" Margin="32,84,833,622"  />
+
+        <PasswordBox  materialDesign:HintAssist.Hint="Enter Password ( 8 - 20 Characters)" x:Name="PassWord" Margin="32,160,833,544" />
+        <PasswordBox  materialDesign:HintAssist.Hint="Enter Password ( 8 - 20 Characters)"  x:Name="ReTypePassword" Margin="32,256,833,449" />
+        <TextBox  materialDesign:HintAssist.Hint="Enter Email Address" x:Name="Email" Margin="32,326,833,378"/>
+        <TextBox  materialDesign:HintAssist.Hint="Address" x:Name="Address" Margin="307,-12,16,716"/>
+
+        <ComboBox Visibility="Hidden" materialDesign:HintAssist.Hint="Choose Position" Height="65"  x:Name="Position" Margin="308,113,559,622" >
+            <ComboBoxItem Content="Employee"></ComboBoxItem>
+            <ComboBoxItem Content="Admin"></ComboBoxItem>
+            <ComboBoxItem Content="HR Staff"></ComboBoxItem>
+        </ComboBox>
+
+        <ComboBox Visibility="Hidden" materialDesign:HintAssist.Hint="Choose Position" Height="65"  x:Name="PositionHR" Margin="308,113,559,622" >
+            <ComboBoxItem Content="Employee"></ComboBoxItem>
+            <ComboBoxItem Content="HR Staff"></ComboBoxItem>
+        </ComboBox>
+
+
+        <ComboBox materialDesign:HintAssist.Hint="Choose job title" x:Name="JobTitle" Margin="307,160,559,480"/>
+       
+        <DatePicker x:Name="Birthdate" materialDesign:HintAssist.Hint="Birthdate" Margin="597,103,299,622"/>
+
+        <TextBox  materialDesign:HintAssist.Hint="Upload Picture"  x:Name="ImageName" Margin="597,193,16,544"/>
+        <CheckBox Content="Allow Leave" x:Name="allowingLeave" Checked="AllowingLeave_OnChecked" Unchecked="AllowingLeave_OnUnchecked" Margin="871,316,126,415"/>
+        <TextBox  materialDesign:HintAssist.Hint="Number of leave" PreviewTextInput="NumberValidationTextBox"  x:Name="AllowedLeaves"  Margin="871,369,25,368"/>
+        <Button Height="Auto"  Click="OpenFileDialog" Margin="597,293,347,472" Content="Upload" />
+        <StackPanel  Margin="300,30,0,0" Height="50" Orientation="Horizontal">
+            <TextBlock Text="Gender: "/>
+            <RadioButton Width="70" x:Name="Male" Content="Male"  GroupName="Gender"/>
+        <RadioButton Width="70" x:Name="Female" Content="Female" GroupName="Gender"/>
+        </StackPanel>
+        <Button Height="Auto" Click="RegisterUser" Margin="32,505,884,243" >Submit</Button>
+
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,145 @@
+﻿<UserControl x:Class="Remax2019.ViewModel.EmployeeList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Remax2019"
+
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+              
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" Width="1200" Height="1000">
+    <UserControl.Resources>
+        <local:ByteArrayToImageConverter x:Key="converter" />
+    </UserControl.Resources>
+    <Grid>
+        <StackPanel Margin="0,-10,0,10" >
+
+            <DataGrid x:Name="dataGrid"  ItemsSource="{Binding borrower}"
+                      SelectedItem="{Binding id, Mode=TwoWay}" AutoGenerateColumns="False" IsReadOnly="True"  SelectionChanged="dataGrid_SelectionChanged" Height="772" >
+                <DataGrid.Columns>
+
+                    <DataGridTemplateColumn/>
+                    <DataGridTemplateColumn Width="90" Header="" >
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Width="250" Stretch="Uniform"  MaxHeight="120" MaxWidth="150" Height="70" Source="{Binding picture, Converter={StaticResource converter}}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn FontSize="11" Width="200"  Header="EmployeeID" Binding="{Binding employeeId}"/>
+                    <DataGridTextColumn FontSize="11" Width="400" Header="Full Name" Binding="{Binding name}"/>
+                    <DataGridTextColumn Header="Username" Binding="{Binding username}"/>
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Height="20" FontSize="10" Tag="{Binding id}" x:Name="deleteMember" Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}" CommandTarget="{Binding ElementName=isDelete}" Content="Delete" Click="DeleteMember"/>
+                                    <TextBlock Text="    "/>
+                                    <Button  Height="20"  FontSize="10" Tag="{Binding id}" x:Name="editMemberClick" Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}" CommandTarget="{Binding ElementName=editMemberDialog}" Content="Edit" Click="EditMemberClick_OnClick" />
+                                    <TextBlock Text="    "/>
+
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+                <DataGrid.ItemContainerStyle >
+                    <Style TargetType="{x:Type DataGridRow}" >
+                        <EventSetter  Event="Control.MouseDoubleClick" Handler="Row_DoubleClick"/>
+
+                    </Style>
+                </DataGrid.ItemContainerStyle>
+            </DataGrid>
+            <StackPanel Orientation="Horizontal"   HorizontalAlignment="Right" Width="718">
+                <TextBox Width="200" x:Name="searchUser" TextChanged="SearchUser_OnTextChanged"  materialDesign:HintAssist.Hint="Search"/>
+                <TextBlock Margin="10"/>
+                <Button Click="prevPage" Content="Previous"/>
+                <TextBlock Margin="10"/>
+                <TextBox x:Name="currentPage" Width="20" Background="white" Text="1" TextChanged="pageByTextbox"/>
+                <TextBlock Margin="10"/>
+                <Button Content="   Next   " Click="nextPage"/>
+            </StackPanel>
+        </StackPanel>
+        <materialDesign:DialogHost IsOpen="False" x:Name="isDelete" Margin="0,-126,0,-32"   >
+            <materialDesign:DialogHost.DialogContent>
+                <StackPanel Margin="60 40" HorizontalAlignment="Left" Orientation="Vertical">
+                    <TextBlock Text="Are you sure you want to delete this member ?" Margin="0 0 0 20"></TextBlock>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Width="100" Tag="{Binding borrowers_id}"  Command="{x:Static materialDesign:DialogHost.CloseDialogCommand }" x:Name="deleteMember" CommandTarget="{Binding ElementName=isDelete}" Click="confirmDelete">Yes</Button>
+                        <TextBlock Text="     "/>
+                        <Button Width="100" Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" CommandTarget="{Binding ElementName=isDelete}">No</Button>
+                    </StackPanel>
+                </StackPanel>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
+
+
+
+        <materialDesign:DialogHost IsOpen="False" x:Name="editMemberDialog"    >
+            <materialDesign:DialogHost.DialogContent>
+                <StackPanel Margin="60 40" HorizontalAlignment="Left" Orientation="Vertical">
+                    <TextBox Visibility="Hidden" x:Name="MemberId" Width="150"  Text="{Binding Path=id, Mode=TwoWay}"/>
+                    <StackPanel Orientation="Horizontal">
+
+                        <TextBlock VerticalAlignment="Center"  Text="Full Name: "></TextBlock>
+                        <TextBox x:Name="FirstName" Width="150"  Text="{Binding Path=name , Mode=TwoWay}"/>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center" Text="Address: "></TextBlock>
+                        <TextBox x:Name="Address" Width="350" Text="{Binding Path=address , Mode=TwoWay}"></TextBox>
+                        <TextBlock VerticalAlignment="Center" Text="Email Address: "></TextBlock>
+                        <TextBox x:Name="Area" Width="235" Text="{Binding Path=email , Mode=TwoWay}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center" Text="Age: "></TextBlock>
+                        <TextBox IsReadOnly="True" x:Name="Age" Width="150" Text="{Binding Path=age , Mode=TwoWay}"></TextBox>
+                     
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center" Text="Job Title: "></TextBlock>
+
+                        <ComboBox  Text="{Binding Path=job_title , Mode=TwoWay}" materialDesign:HintAssist.Hint="Choose job title" x:Name="JobTitle" Margin="0,0,20,0"/>
+
+<TextBlock  VerticalAlignment="Center" Text="Allowed Leaves: "></TextBlock>
+                        <TextBox Width="150" x:Name="AllowedLeave" Text="{Binding Path=allowable_leaves, Mode=TwoWay}"></TextBox>
+
+                    </StackPanel>
+
+
+
+                    <StackPanel Orientation="Horizontal">
+                        <Button   Content="Insert Image" Click="OpenFileDialog"/>
+                        <TextBlock Margin="5"/>
+                        <TextBox materialDesign:HintAssist.Hint="Image Name" x:Name="ImageName"  VerticalAlignment="Center" Width="220"/>
+                        <TextBlock Margin="20"/>
+                        <TextBlock VerticalAlignment="Center" Text="Position: "/>
+                        <ComboBox Visibility="Hidden" Width="220" Text="{Binding Path=position, Mode=TwoWay}"  x:Name="Position" >
+                            <ComboBoxItem Content="Employee"></ComboBoxItem>
+                            <ComboBoxItem Content="Admin"></ComboBoxItem>
+                            <ComboBoxItem Content="HR Staff"></ComboBoxItem>
+                        </ComboBox>
+                        <ComboBox Margin="-220 0 0 0" Visibility="Hidden" Width="220" Text="{Binding Path=position, Mode=TwoWay}"  x:Name="PositionHR" >
+                            <ComboBoxItem Content="Employee"></ComboBoxItem>
+                            <ComboBoxItem Content="HR Staff"></ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel>
+                    
+                    <TextBlock/>
+                    <TextBlock/>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                        <Button Width="100" x:Name="ConfirmUpdate" Click="ConfirmUpdate_OnClick" Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" >Update</Button>
+                        <TextBlock Text="   "/>
+                        <Button Width="100"  Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" >Cancel</Button>
+
+                    </StackPanel>
+                </StackPanel>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
+    </Grid>
+
+</UserControl>

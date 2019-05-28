@@ -1,0 +1,86 @@
+﻿<UserControl x:Class="Remax2019.ViewModel.Payroll"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Remax2019.ViewModel"
+             xmlns:rv="clr-namespace:Microsoft.Reporting.WinForms;assembly=Microsoft.ReportViewer.WinForms"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" Width="1200" Height="1000">
+
+    <Grid>
+        <WindowsFormsHost HorizontalAlignment="Left" Height="28" Margin="10,494,0,0" VerticalAlignment="Top" Width="1147" >
+            <rv:ReportViewer ShowRefreshButton="false" ShowFindControls="False" ShowContextMenu="false" ShowCredentialPrompts="false" ShowPromptAreaButton="false" ShowStopButton="false"  ShowZoomControl="false" ShowParameterPrompts="False"  ShowPageNavigationControls="False" ShowBackButton="False" ShowProgress="False" ShowDocumentMapButton="False" x:Name="ReportViewerDemo"/>
+        </WindowsFormsHost>
+       
+        <DataGrid EnableRowVirtualization="False" EnableColumnVirtualization="False" x:Name="payrollGrid"  
+                   AutoGenerateColumns="False" IsReadOnly="True" Margin="0,50,43,580" >
+            <DataGrid.Columns>
+                <DataGridTextColumn FontSize="11"   Header="Start Date" Binding="{Binding start_date}"/>
+                <DataGridTextColumn FontSize="11" Width="300" Header="End Date" Binding="{Binding end_date}"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding processed}"/>
+
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="    "/>
+
+                                <TextBlock Text="    "/>
+                                <Button Height="20" FontSize="10" Tag="{Binding id}" x:Name="deleteMember" Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}" CommandTarget="{Binding ElementName=isDelete}" Content="Complete" Click="Archived"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+            <DataGrid.ItemContainerStyle >
+                <Style TargetType="{x:Type DataGridRow}" >
+                    <EventSetter  Event="Control.MouseDoubleClick" Handler="Row_DoubleClick"/>
+
+                </Style>
+            </DataGrid.ItemContainerStyle>
+        </DataGrid>
+
+        <DataGrid EnableRowVirtualization="False" EnableColumnVirtualization="False" x:Name="EmployeeList"  
+                  AutoGenerateColumns="False" IsReadOnly="True" Margin="0,527,43,139" >
+            <DataGrid.Columns>
+                <DataGridTextColumn FontSize="11"   Header="Employee ID" Binding="{Binding EmployeeID}"/>
+                <DataGridTextColumn FontSize="11"   Header="Fullname" Binding="{Binding Fullname}"/>
+                <DataGridTextColumn FontSize="11"   Header="Position" Binding="{Binding Position}"/>
+                <DataGridTextColumn FontSize="11"   Header="Basic Salary" Binding="{Binding BasicSalary}"/>
+                <DataGridTextColumn FontSize="11" Width="100" Header="Cut Off Total" Binding="{Binding cutoff, StringFormat='P#,##0.00;P(#,##0.00)'}"/>
+                <DataGridTextColumn FontSize="11" Width="100" Header="Earned" Binding="{Binding Earned, StringFormat='P#,##0.00;P(#,##0.00)'}"/>
+                <DataGridTextColumn FontSize="11" Width="100" Header="Tax" Binding="{Binding Government_Tax, StringFormat='P#,##0.00;P(#,##0.00)'}"/>
+                <DataGridTextColumn FontSize="11" Width="100" Header="Tardy" Binding="{Binding tardy, StringFormat='P#,##0.00;P(#,##0.00)'}"/>
+                <DataGridTextColumn FontSize="11" Width="100" Header="Loan" Binding="{Binding loan, StringFormat='P#,##0.00;P(#,##0.00)'}"/>
+                <DataGridTextColumn FontSize="11" Width="100" Header="Total Salary" Binding="{Binding total_salary, StringFormat='P#,##0.00;P(#,##0.00)'}"/>
+                
+                <DataGridTextColumn FontSize="11"   Header="Starting Day" Binding="{Binding LastDay , StringFormat='{}{0:dd/MM/yyyy}'}"/>
+                <DataGridTextColumn FontSize="11"   Header="Days of Work" Binding="{Binding NumberOfdays }"/>
+
+                
+
+            </DataGrid.Columns>
+
+            <DataGrid.ItemContainerStyle >
+                <Style TargetType="{x:Type DataGridRow}" >
+                    <EventSetter  Event="Control.MouseDoubleClick" Handler="EmployeePayroll_DoubleClick"/>
+
+                </Style>
+            </DataGrid.ItemContainerStyle>
+        </DataGrid>
+        <materialDesign:DialogHost IsOpen="False" x:Name="isDelete" Margin="0,-138,0,-20"   >
+            <materialDesign:DialogHost.DialogContent>
+                <StackPanel Margin="60 40" HorizontalAlignment="Left" Orientation="Vertical">
+                    <TextBlock Text="Are you sure you want to delete this member ?" Margin="0 0 0 20"></TextBlock>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Width="100" Tag="{Binding id}"  Command="{x:Static materialDesign:DialogHost.CloseDialogCommand }" x:Name="deleteMember" CommandTarget="{Binding ElementName=isDelete}" Click="confirmArchived">Yes</Button>
+                        <TextBlock Text="     "/>
+                        <Button Width="100" Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" CommandTarget="{Binding ElementName=isDelete }">No</Button>
+                    </StackPanel>
+                </StackPanel>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
+    </Grid>
+</UserControl>

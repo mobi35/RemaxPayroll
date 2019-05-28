@@ -1,0 +1,30 @@
+c:\users\adrian\documents\visual studio 2015\Projects\REMAX-TIMER\REMAX-TIMER\bin\Debug\REMAX-TIMER.exe.config
+c:\users\adrian\documents\visual studio 2015\Projects\REMAX-TIMER\REMAX-TIMER\bin\Debug\REMAX-TIMER.exe
+c:\users\adrian\documents\visual studio 2015\Projects\REMAX-TIMER\REMAX-TIMER\bin\Debug\REMAX-TIMER.pdb
+c:\users\adrian\documents\visual studio 2015\Projects\REMAX-TIMER\REMAX-TIMER\bin\Debug\BouncyCastle.Crypto.dll
+c:\users\adrian\documents\visual studio 2015\Projects\REMAX-TIMER\REMAX-TIMER\bin\Debug\EntityFramework.dll
+c:\users\adrian\documents\visual studio 2015\Projects\REMAX-TIMER\REMAX-TIMER\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\adrian\documents\visual studio 2015\Projects\REMAX-TIMER\REMAX-TIMER\bin\Debug\MaterialDesignColors.dll
+c:\users\adrian\documents\visual studio 2015\Projects\REMAX-TIMER\REMAX-TIMER\bin\Debug\MaterialDesignThemes.Wpf.dll
+c:\users\adrian\documents\visual studio 2015\Projects\REMAX-TIMER\REMAX-TIMER\bin\Debug\EntityFramework.xml
+c:\users\adrian\documents\visual studio 2015\Projects\REMAX-TIMER\REMAX-TIMER\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\adrian\documents\visual studio 2015\Projects\REMAX-TIMER\REMAX-TIMER\bin\Debug\MaterialDesignThemes.Wpf.pdb
+c:\users\adrian\documents\visual studio 2015\Projects\REMAX-TIMER\REMAX-TIMER\bin\Debug\MaterialDesignThemes.Wpf.xml
+c:\users\adrian\documents\visual studio 2015\Projects\REMAX-TIMER\REMAX-TIMER\obj\Debug\Login.g.cs
+c:\users\adrian\documents\visual studio 2015\Projects\REMAX-TIMER\REMAX-TIMER\obj\Debug\TimerForm.g.cs
+c:\users\adrian\documents\visual studio 2015\Projects\REMAX-TIMER\REMAX-TIMER\obj\Debug\App.g.cs
+c:\users\adrian\documents\visual studio 2015\Projects\REMAX-TIMER\REMAX-TIMER\obj\Debug\REMAX-TIMER_MarkupCompile.cache
+c:\users\adrian\documents\visual studio 2015\Projects\REMAX-TIMER\REMAX-TIMER\obj\Debug\REMAX-TIMER_MarkupCompile.lref
+c:\users\adrian\documents\visual studio 2015\Projects\REMAX-TIMER\REMAX-TIMER\obj\Debug\App.baml
+c:\users\adrian\documents\visual studio 2015\Projects\REMAX-TIMER\REMAX-TIMER\obj\Debug\Login.baml
+c:\users\adrian\documents\visual studio 2015\Projects\REMAX-TIMER\REMAX-TIMER\obj\Debug\TimerForm.baml
+c:\users\adrian\documents\visual studio 2015\Projects\REMAX-TIMER\REMAX-TIMER\obj\Debug\REMAX-TIMER.g.resources
+c:\users\adrian\documents\visual studio 2015\Projects\REMAX-TIMER\REMAX-TIMER\obj\Debug\REMAX_TIMER.Properties.Resources.resources
+c:\users\adrian\documents\visual studio 2015\Projects\REMAX-TIMER\REMAX-TIMER\obj\Debug\REMAX-TIMER.csproj.GenerateResource.Cache
+c:\users\adrian\documents\visual studio 2015\Projects\REMAX-TIMER\REMAX-TIMER\obj\Debug\REMAX-TIMER.exe
+c:\users\adrian\documents\visual studio 2015\Projects\REMAX-TIMER\REMAX-TIMER\obj\Debug\REMAX-TIMER.pdb
+C:\Users\Adrian\documents\visual studio 2015\Projects\REMAX-TIMER\REMAX-TIMER\obj\Debug\REMAX-TIMER.csprojResolveAssemblyReference.cache
+C:\Users\Adrian\documents\visual studio 2015\Projects\REMAX-TIMER\REMAX-TIMER\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Adrian\Pictures\REMAXING\REMAX-TIMER\REMAX-TIMER\bin\Debug\REMAX-TIMER.exe.config
+C:\Users\Adrian\Pictures\REMAXING\REMAX-TIMER\REMAX-TIMER\obj\Debug\REMAX-TIMER.exe
+C:\Users\Adrian\Pictures\REMAXING\REMAX-TIMER\REMAX-TIMER\obj\Debug\REMAX-TIMER.pdb

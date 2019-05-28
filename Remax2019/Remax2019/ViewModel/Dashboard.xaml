@@ -1,0 +1,83 @@
+﻿<UserControl x:Class="Remax2019.Dashboard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Remax2019"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1200">
+
+    <Grid>
+
+        <StackPanel Orientation="Horizontal">
+            <materialDesign:Card Width="230" Background="MediumSeaGreen"  Margin="20" Padding="20" Height="200">
+                <StackPanel>
+
+                    <Image x:Name="UserImage"  Width="100" Height="100"/>
+
+                    <TextBlock FontSize="20" HorizontalAlignment="Center"
+
+                               Style="{StaticResource MaterialDesignSubheadingTextBlock}">
+                        <TextBlock x:Name="EmployeeId"   Text="Date"  />
+                    
+                    </TextBlock>
+                    <TextBlock
+                        Style="{StaticResource MaterialDesignSubheadingTextBlock}">
+                        <TextBlock  Margin="0,0,0,0" x:Name="Position" Text="Position"   />
+                    </TextBlock>
+                </StackPanel>
+            </materialDesign:Card>
+
+            <materialDesign:Card Background="Coral" Width="230"  Margin="20"  Padding="20" Height="200">
+                <StackPanel>
+                    <materialDesign:PackIcon Width="190" Height="70" Kind="Account" />
+                    <TextBlock FontSize="23" HorizontalAlignment="Center"
+
+                        Style="{StaticResource MaterialDesignSubheadingTextBlock}">
+                        <TextBlock  x:Name="Users" Text="Employee"  />
+                    
+                    </TextBlock>
+                    <TextBlock  Style="{StaticResource MaterialDesignSubheadingTextBlock}" HorizontalAlignment="Center" FontSize="40" x:Name="NumberOfUser" Text="Users"  />
+                </StackPanel>
+            </materialDesign:Card>
+
+            <materialDesign:Card Width="230"  Margin="20" Background="OrangeRed" Padding="20" Height="200">
+
+                <StackPanel>
+                    <materialDesign:PackIcon Width="190" Height="70" Kind="Account" />
+                    <TextBlock FontSize="23" HorizontalAlignment="Center"
+
+                               Style="{StaticResource MaterialDesignSubheadingTextBlock}">
+                        <TextBlock  x:Name="TotalSpent" Text="Last Month Spent"  />
+                    
+                    </TextBlock>
+                    <TextBlock  Style="{StaticResource MaterialDesignSubheadingTextBlock}" HorizontalAlignment="Center" TextAlignment="Center" Width="190" FontSize="20" x:Name="TotalAmountSpent" Text="0"  Margin="0,10,0,0"  />
+                </StackPanel>
+
+            </materialDesign:Card>
+
+            <materialDesign:Card Width="230" Background="CornflowerBlue"  Margin="20" Padding="20" Height="200">
+                <StackPanel>
+                    <materialDesign:PackIcon Width="190" Height="70" Kind="Calendar" />
+
+
+                    <TextBlock FontSize="23" HorizontalAlignment="Center"
+
+                               Style="{StaticResource MaterialDesignSubheadingTextBlock}">
+                        <TextBlock   Text="Date"  />
+                    
+                    </TextBlock>
+                    <TextBlock
+                        Style="{StaticResource MaterialDesignSubheadingTextBlock}">
+                        <TextBlock  Margin="0,20,0,0" x:Name="DateToday"   />
+                    </TextBlock>
+                </StackPanel>
+            </materialDesign:Card>
+        </StackPanel>
+
+
+    </Grid>
+
+
+</UserControl>

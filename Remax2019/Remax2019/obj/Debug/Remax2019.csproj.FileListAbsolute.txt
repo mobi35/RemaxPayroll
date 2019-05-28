@@ -1,0 +1,136 @@
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\bin\Debug\Remax2019.exe.config
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\bin\Debug\Remax2019.exe
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\bin\Debug\Remax2019.pdb
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\bin\Debug\EntityFramework.dll
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\bin\Debug\MaterialDesignColors.dll
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\bin\Debug\EntityFramework.xml
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\Leave.baml
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\AccountDetails.g.cs
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\Accounts.g.cs
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\AddUser.g.cs
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\AdminLeaveControl.g.cs
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\AdminReviewOvertime.g.cs
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\EmployeeDashboard.g.cs
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\Dashboard.g.cs
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\EmployeeList.g.cs
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\EmployeeOvertime.g.cs
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\EmployeePage.g.cs
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\EmployeePayrollDetails.g.cs
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\Leave.g.cs
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\MainWindow.g.cs
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\Login.g.cs
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\Memo.g.cs
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\Payroll.g.cs
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\App.g.cs
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\Remax2019_MarkupCompile.cache
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\Remax2019_MarkupCompile.lref
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\App.baml
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\AccountDetails.baml
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\Accounts.baml
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\AddUser.baml
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\AdminLeaveControl.baml
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\AdminReviewOvertime.baml
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\EmployeeDashboard.baml
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\Dashboard.baml
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\EmployeeList.baml
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\EmployeeOvertime.baml
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\EmployeePage.baml
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\EmployeePayrollDetails.baml
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\MainWindow.baml
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\Login.baml
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\Memo.baml
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\Payroll.baml
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\Remax2019.g.resources
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\Remax2019.Properties.Resources.resources
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\Remax2019.csproj.GenerateResource.Cache
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\RdlCompile.cache
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\RdlCompile.compiled
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\Remax2019.exe
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\Remax2019.pdb
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\AddJobTitle.g.cs
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\AddJobTitle.baml
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\Holidays.g.cs
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\Holidays.baml
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\Remax2019.csprojResolveAssemblyReference.cache
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\EmployeeAttendance.g.cs
+C:\Users\Adrian\documents\visual studio 2015\Projects\Remax2019\Remax2019\obj\Debug\ViewModel\EmployeeAttendance.baml
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\bin\Debug\Remax2019.exe.config
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\Remax2019.exe
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\Remax2019.pdb
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\bin\Debug\Remax2019.exe
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\bin\Debug\Remax2019.pdb
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\bin\Debug\EntityFramework.dll
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\bin\Debug\MaterialDesignColors.dll
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\bin\Debug\EntityFramework.xml
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\Remax2019.csprojResolveAssemblyReference.cache
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\Leave.baml
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\AccountDetails.g.cs
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\Accounts.g.cs
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\AddJobTitle.g.cs
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\AddUser.g.cs
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\AdminLeaveControl.g.cs
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\AdminReviewOvertime.g.cs
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\EmployeeAttendance.g.cs
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\EmployeeDashboard.g.cs
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\Dashboard.g.cs
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\EmployeeList.g.cs
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\EmployeeLoan.g.cs
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\EmployeeOvertime.g.cs
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\EmployeePage.g.cs
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\EmployeePayrollDetails.g.cs
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\Holidays.g.cs
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\Leave.g.cs
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\MainWindow.g.cs
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\Login.g.cs
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\Memo.g.cs
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\Payroll.g.cs
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\App.g.cs
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\Remax2019_MarkupCompile.cache
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\Remax2019_MarkupCompile.lref
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\App.baml
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\AccountDetails.baml
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\Accounts.baml
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\AddJobTitle.baml
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\AddUser.baml
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\AdminLeaveControl.baml
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\AdminReviewOvertime.baml
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\EmployeeAttendance.baml
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\EmployeeDashboard.baml
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\Dashboard.baml
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\EmployeeList.baml
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\EmployeeLoan.baml
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\EmployeeOvertime.baml
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\EmployeePage.baml
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\EmployeePayrollDetails.baml
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\Holidays.baml
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\MainWindow.baml
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\Login.baml
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\Memo.baml
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\Payroll.baml
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\Remax2019.g.resources
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\Remax2019.Properties.Resources.resources
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\Remax2019.csproj.GenerateResource.Cache
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\RdlCompile.cache
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\RdlCompile.compiled
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\AdminLoanControl.g.cs
+C:\Users\Adrian\Pictures\REMAXING\Remax2019\Remax2019\obj\Debug\ViewModel\AdminLoanControl.baml

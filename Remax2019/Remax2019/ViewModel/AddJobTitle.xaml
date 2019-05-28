@@ -1,0 +1,89 @@
+﻿<UserControl x:Class="Remax2019.ViewModel.AddJobTitle"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Remax2019.ViewModel"
+             mc:Ignorable="d" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+            Width="1200" Height="1000">
+    <Grid>
+        <StackPanel Margin="20" Width="1000">
+            <TextBlock/>
+            <TextBlock/>
+            <TextBlock/>
+    <StackPanel HorizontalAlignment="Left">
+            <TextBox x:Name="AddJob" materialDesign:HintAssist.Hint="Job Title" Width="300"></TextBox>
+            <TextBlock/>
+            <TextBox PreviewTextInput="NumberValidationTextBox"  x:Name="AddSalary" materialDesign:HintAssist.Hint="Salary" Width="300" ></TextBox>
+            <TextBlock/>
+            <Button Click="AddJobTitleSubmit_OnClick" x:Name="AddJobTitleSubmit" Width="200" Content="Submit"/>
+        <TextBlock/>
+            </StackPanel>
+            <DataGrid EnableRowVirtualization="False" EnableColumnVirtualization="False" x:Name="JobTitleGrid"  
+                      AutoGenerateColumns="False" IsReadOnly="True" Height="407">
+              <DataGrid.Columns>
+                    <DataGridTextColumn FontSize="11" Width="300"   Header="Job Title" Binding="{Binding job_title}"/>
+              <DataGridTextColumn FontSize="11"   Header="Salary" Binding="{Binding salary}"/>
+                  <DataGridTemplateColumn>
+                      <DataGridTemplateColumn.CellTemplate>
+
+                          <DataTemplate>
+                              <StackPanel Orientation="Horizontal">
+                                    <Button Height="20" FontSize="10" Tag="{Binding id}" x:Name="DeleteJobTitle" Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}" CommandTarget="{Binding ElementName=isDelete}" Content="Delete" Click="DeleteJobTitle_OnClick"/>
+                                  <TextBlock Text="    "/>
+                                    <Button  Height="20"  FontSize="10" Tag="{Binding id}" x:Name="EditJobTitle" Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}" CommandTarget="{Binding ElementName=Editz}" Content="Edit" Click="EditJobTitle_OnClick"  />
+                                  <TextBlock Text="    "/>
+
+                              </StackPanel>
+                          </DataTemplate>
+                      </DataGridTemplateColumn.CellTemplate>
+                  </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+
+
+        <materialDesign:DialogHost IsOpen="False" x:Name="isDelete" Margin="0,-126,0,-32"   >
+            <materialDesign:DialogHost.DialogContent>
+                <StackPanel Margin="60 40" HorizontalAlignment="Left" Orientation="Vertical">
+                    <TextBlock Text="Are you sure you want to delete this member ?" Margin="0 0 0 20"></TextBlock>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Width="100" Tag="{Binding borrowers_id}"  Command="{x:Static materialDesign:DialogHost.CloseDialogCommand }" x:Name="DeleteJobTitle" CommandTarget="{Binding ElementName=isDelete}" Click="ConfirmDeleteJob">Yes</Button>
+                        <TextBlock Text="     "/>
+                        <Button Width="100" Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" CommandTarget="{Binding ElementName=isDelete}">No</Button>
+                    </StackPanel>
+                </StackPanel>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
+
+
+
+        <materialDesign:DialogHost IsOpen="False" x:Name="Editz"    >
+            <materialDesign:DialogHost.DialogContent>
+                <StackPanel Margin="60 40" HorizontalAlignment="Left" Orientation="Vertical">
+                    <TextBox Visibility="Hidden" x:Name="JobId" Width="150"  Text="{Binding Path=id, Mode=TwoWay}"/>
+                 
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center" Text="Job Title: "></TextBlock>
+                        <TextBox x:Name="JobTitle" Width="350" Text="{Binding Path=job_title , Mode=TwoWay}"></TextBox>
+                        <TextBlock VerticalAlignment="Center" Text="Salary : "></TextBlock>
+                        <TextBox x:Name="Salary" Width="235" Text="{Binding Path=salary , Mode=TwoWay}"></TextBox>
+                    </StackPanel>
+             
+
+                    <TextBlock/>
+                    <TextBlock/>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                        <Button Width="100" x:Name="ConfirmUpdate" Click="ConfirmUpdate_OnClick" Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" >Update</Button>
+                        <TextBlock Text="   "/>
+                        <Button Width="100"  Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" >Cancel</Button>
+
+                    </StackPanel>
+                </StackPanel>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
+    </Grid>
+</UserControl>

@@ -1,0 +1,77 @@
+﻿<UserControl x:Class="Remax2019.ViewModel.EmployeeLoan"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Remax2019.ViewModel"
+             mc:Ignorable="d" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             d:DesignHeight="768" d:DesignWidth="1366">
+    <Grid>
+     <StackPanel HorizontalAlignment="Left" Margin="30,32,0,-32" >
+         <TextBlock Text="Reason"/>
+         <TextBox x:Name="Reason"  VerticalContentAlignment="Top" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled"    TextWrapping="Wrap" AcceptsReturn="True" MaxHeight="250" Height="500" MaxWidth="300" Width="300"   Background="#FFF5DCEB" />
+            <TextBlock/>
+            <TextBlock/>
+            <TextBox x:Name="PrincipalAmount" Text="{Binding Path=PrincipalAmount, Mode=TwoWay}" materialDesign:HintAssist.Hint="Principal Amount" Width="300" Height="30"></TextBox>
+<TextBlock/>
+
+            <ComboBox x:Name="CutOff" Text="{Binding Path=CutOffs, Mode=TwoWay}" materialDesign:HintAssist.Hint="How many cut offs" ToolTip="Mature Amount of loan may vary depending on the number of cut off terms" Width="300" >
+            <ComboBoxItem>1</ComboBoxItem>
+            <ComboBoxItem>2</ComboBoxItem>
+            <ComboBoxItem>3</ComboBoxItem>
+            <ComboBoxItem>4</ComboBoxItem>
+            <ComboBoxItem>5</ComboBoxItem>
+            <ComboBoxItem>6</ComboBoxItem>
+            <ComboBoxItem>7</ComboBoxItem>
+            <ComboBoxItem>8</ComboBoxItem>
+            <ComboBoxItem>9</ComboBoxItem>
+            <ComboBoxItem>10</ComboBoxItem>
+        </ComboBox>
+         <TextBlock/>
+         <TextBlock Text="Deduction Every Month"/>
+         <TextBlock  Text="{Binding Path=PayPerCutOff, Mode=TwoWay}"/>
+         <TextBlock Text="Maturity Value"/>
+            <TextBlock   Text="{Binding Path=MaturityValue, Mode=TwoWay}"/>
+            <TextBlock Visibility="Hidden"  x:Name="CutOffField" Text="{Binding Path=PayPerCutOffField, Mode=TwoWay}"/>
+            <TextBlock Visibility="Hidden" x:Name="MaturityValueField" Text="{Binding Path=MaturityValueField, Mode=TwoWay}"/>
+            <TextBlock/>
+       
+            <TextBlock/>
+         <TextBlock/>
+            <Button Click="LoanExecute_OnClick" x:Name="LoanExecute" Width="200" >Request Loan</Button>
+     </StackPanel>
+        <DataGrid FontSize="9" AutoGenerateColumns="False" IsReadOnly="True" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden" x:Name="LoanHistory" Margin="353,44,34,160">
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="Background" Value="Gray" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Path=status}" Value="declined">
+                            <Setter Property="Background" Value="LightCoral"/>
+                            <Setter Property="Foreground" Value="Black"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Path=status}" Value="accepted">
+                            <Setter Property="Background" Value="LightGreen"/>
+                            <Setter Property="Foreground" Value="Black"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Path=status}" Value="pending">
+                            <Setter Property="Background" Value="Orange"/>
+                            <Setter Property="Foreground" Value="Black"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.Columns>
+
+                <DataGridTextColumn  Width="70" Header="Loan" Binding="{Binding principal_loan, StringFormat='P#,##0.00;P(#,##0.00)'}"/>
+                <DataGridTextColumn Header="Maturity Amount" Binding="{Binding maturity_value, StringFormat='P#,##0.00;P(#,##0.00)'}"/>
+                <DataGridTextColumn Header="Cut Off Payments" Binding="{Binding cut_off_payment, StringFormat='P#,##0.00;P(#,##0.00)'}"/>
+                <DataGridTextColumn Width="70" Header="Terms" Binding="{Binding cut_off_terms}"/>
+                <DataGridTextColumn Header="Remaining Terms" Binding="{Binding remaining_cut_off}"/>
+                <DataGridTextColumn FontSize="10" Header="Status" Binding="{Binding status}"/>
+                <DataGridTextColumn Header="Action By" Binding="{Binding accepted_by}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</UserControl>

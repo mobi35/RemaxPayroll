@@ -1,0 +1,75 @@
+﻿<Window x:Class="REMAX_TIMER.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:REMAX_TIMER"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:remaxTimer="clr-namespace:REMAX_TIMER"
+
+
+        mc:Ignorable="d"
+        Title="Login" Height="300" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Window.Resources>
+        <remaxTimer:ByteArrayToImageConverter x:Key="converter" />
+    </Window.Resources>
+    <Grid x:Name="LoginForm">
+
+        <Grid x:Name="AlreadyLogin">
+            <StackPanel>
+                <Grid  Height="30" VerticalAlignment="Top" Background="Red"  >
+                    <TextBlock FontSize="17" Margin="3"  HorizontalAlignment="Center"
+
+                                   Style="{StaticResource MaterialDesignSubheadingTextBlock}"><InlineUIContainer>
+                            <TextBlock  Text="REMAX - Login "  />
+                        
+                        </InlineUIContainer></TextBlock>
+                    <Button HorizontalAlignment="Right" Click="Close"  Width="25" Background="{x:Null}" BorderBrush="{x:Null}" Padding="5" >
+                        <materialDesign:PackIcon  Kind="Close" />
+                    </Button>
+
+
+                </Grid>
+
+                <TextBlock/>
+                <Border Width="130" Background="AliceBlue" BorderBrush="Red"  BorderThickness="1">
+                    <Image Stretch="Fill" x:Name="AlreadyImage" Width="130" Height="130" ></Image>
+                </Border>
+
+                <TextBlock/>
+                <Button x:Name="AlreadyButton" Width="200" Click="AlreadyButton_OnClick" Content="Login as"></Button>
+                <TextBlock/>
+                <Button x:Name="AlreadyRemove" Width="200" Click="AlreadyRemove_OnClick" Content="Remove Account"></Button>
+            </StackPanel>
+        </Grid>
+        <Grid Visibility="Hidden" x:Name="LoginChild">
+            <Grid  Height="30" VerticalAlignment="Top" Background="Red"  >
+                <TextBlock FontSize="17" Margin="3"  HorizontalAlignment="Center"
+
+                           Style="{StaticResource MaterialDesignSubheadingTextBlock}"><InlineUIContainer>
+                    <TextBlock  Text="REMAX - Login "  />
+                        
+                </InlineUIContainer></TextBlock>
+                <Button HorizontalAlignment="Right" Click="Close"  Width="25" Background="{x:Null}" BorderBrush="{x:Null}" Padding="5" >
+                    <materialDesign:PackIcon  Kind="Close" />
+                </Button>
+
+
+            </Grid>
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock  Text="Username" TextAlignment="Center"/>
+                <TextBox x:Name="UserName" Width="200"></TextBox>
+                <TextBlock/>
+
+                <TextBlock  Text="Password" TextAlignment="Center"/>
+                <PasswordBox x:Name="PassWord" Width="200"></PasswordBox>
+
+                <TextBlock/>
+                <Button  Width="100" Click="DoLogin">Login</Button>
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+
+
+</Window>

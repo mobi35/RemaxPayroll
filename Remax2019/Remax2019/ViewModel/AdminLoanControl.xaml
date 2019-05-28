@@ -1,0 +1,99 @@
+﻿<UserControl x:Class="Remax2019.ViewModel.AdminLoanControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Remax2019.ViewModel"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="768" d:DesignWidth="1366">
+    <Grid>
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden" x:Name="LoanControl" Margin="10,10,10,401">
+       
+            <DataGrid.Columns>
+                <DataGridTextColumn FontSize="11"   Header="Employee ID" Binding="{Binding employee_id}"/>
+                <DataGridTextColumn Header="Principal Loan" Binding="{Binding principal_loan}"/>
+                <DataGridTextColumn Header="Maturity Amount" Binding="{Binding maturity_value}"/>
+                <DataGridTextColumn Header="Cut Off Payments" Binding="{Binding cut_off_payment}"/>
+                <DataGridTextColumn Header="Cut Off Terms" Binding="{Binding cut_off_terms}"/>
+                <DataGridTextColumn Header="Remaining Terms" Binding="{Binding remaining_cut_off}"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel  Orientation="Horizontal">
+                                <Button x:Name="accept" Height="20" FontSize="10" Tag="{Binding id}" Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}" CommandTarget="{Binding ElementName=isAccept}" Content="Accept" Click="AcceptLoan"/>
+                                <Button Height="20" FontSize="10" Tag="{Binding id}" x:Name="decline" Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}" CommandTarget="{Binding ElementName=isDecline}" Content="Decline" Click="DeclineLoan"/>
+                                <Button Height="20" FontSize="10" Tag="{Binding id}"  Content="Show Message" Click="ViewMessage"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden" x:Name="LoanControlHistory" Margin="10,401,10,10">
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="Background" Value="Gray" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Path=status}" Value="declined">
+                            <Setter Property="Background" Value="LightCoral"/>
+                            <Setter Property="Foreground" Value="Black"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Path=status}" Value="accepted">
+                            <Setter Property="Background" Value="LightGreen"/>
+                            <Setter Property="Foreground" Value="Black"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn FontSize="11"   Header="Employee ID" Binding="{Binding employee_id}"/>
+                <DataGridTextColumn Header="Principal Loan" Binding="{Binding principal_loan, StringFormat='P#,##0.00;P(#,##0.00)'}" />
+                <DataGridTextColumn Header="Maturity Amount" Binding="{Binding maturity_value, StringFormat='P#,##0.00;P(#,##0.00)'}"/>
+                <DataGridTextColumn Header="Cut Off Payments" Binding="{Binding cut_off_payment, StringFormat='P#,##0.00;P(#,##0.00)'}"/>
+                <DataGridTextColumn Header="Cut Off Terms" Binding="{Binding cut_off_terms}"/>
+                <DataGridTextColumn Header="Remaining Terms" Binding="{Binding remaining_cut_off}"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding status}"/>
+                <DataGridTextColumn Header="Accepted By" Binding="{Binding accepted_by}"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel  Orientation="Horizontal">
+                              
+                                <Button Height="20" FontSize="10" Tag="{Binding id}"  Content="Show Message" Click="ViewMessage"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+        <materialDesign:DialogHost IsOpen="False" x:Name="isAccept" Margin="0,-126,0,-32"   >
+            <materialDesign:DialogHost.DialogContent>
+                <StackPanel Margin="60 40" HorizontalAlignment="Left" Orientation="Vertical">
+                    <TextBlock Text="Are you sure you want to accept this leave ? ?" Margin="0 0 0 20"></TextBlock>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Width="100" Tag="{Binding Id}"  Command="{x:Static materialDesign:DialogHost.CloseDialogCommand }" x:Name="accept" CommandTarget="{Binding ElementName=isAccept}" Click="confirmAccept">Yes</Button>
+                        <TextBlock Text="     "/>
+                        <Button Width="100" Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" CommandTarget="{Binding ElementName=isAccept}">No</Button>
+                    </StackPanel>
+                </StackPanel>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
+
+        <materialDesign:DialogHost IsOpen="False" x:Name="isDecline" Margin="0,-126,0,-32"   >
+            <materialDesign:DialogHost.DialogContent>
+                <StackPanel Margin="60 40" HorizontalAlignment="Left" Orientation="Vertical">
+                    <TextBlock Text="Are you sure you want to decline this leave ?" Margin="0 0 0 20"></TextBlock>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Width="100" Tag="{Binding id}"  Command="{x:Static materialDesign:DialogHost.CloseDialogCommand }" x:Name="decline" CommandTarget="{Binding ElementName=isDecline}" Click="confirmDecline">Yes</Button>
+                        <TextBlock Text="     "/>
+                        <Button Width="100" Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" CommandTarget="{Binding ElementName=isDecline}">No</Button>
+                    </StackPanel>
+                </StackPanel>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
+    </Grid>
+</UserControl>

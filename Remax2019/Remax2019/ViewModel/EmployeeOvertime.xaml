@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="Remax2019.ViewModel.EmployeeOvertime"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Remax2019.ViewModel"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:model="clr-namespace:Remax2019.Model"
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="1200">
+
+
+    <Grid>
+
+        <StackPanel HorizontalAlignment="left"  Margin="26,10,0,-10" Width="280">
+            <TextBlock/>
+            <TextBlock/>
+            <DatePicker x:Name="DatePick" materialDesign:HintAssist.Hint="Date"  ></DatePicker>
+            <materialDesign:TimePicker x:Name="TimePick"   SelectedTimeFormat="Long" WithSeconds="True"  ></materialDesign:TimePicker>
+            <TextBlock/>
+            <TextBlock Text="Reason:"/>
+            <TextBlock/>
+            <TextBox   VerticalContentAlignment="Top" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled"    TextWrapping="Wrap" AcceptsReturn="True" MaxHeight="400" Height="300" MaxWidth="500" Width="500" x:Name="Message"  Background="#FFF5DCEB" />
+            <TextBlock/>
+            <Button Click="ButtonBase_OnClick" Width="150">Request Overtime</Button>
+
+        </StackPanel>
+      
+        <DataGrid x:Name="Overtime"  AutoGenerateColumns="False" IsReadOnly="True" Margin="359,30,40,143">
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="Background" Value="Gray" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Path=status}" Value="declined">
+                            <Setter Property="Background" Value="LightCoral"/>
+                            <Setter Property="Foreground" Value="White"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Path=status}" Value="accepted">
+                            <Setter Property="Background" Value="LightGreen"/>
+                            <Setter Property="Foreground" Value="White"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn FontSize="11"   Header="Date" Binding="{Binding date_ot}"/>
+                <DataGridTextColumn FontSize="11"   Header="Overtime Until"  Binding="{Binding until_time ,StringFormat='hh:mm: tt' }"/>
+                <DataGridTextColumn FontSize="11"     Header="Status" Binding="{Binding status}"/>
+                <DataGridTextColumn FontSize="11"     Header="Action By" Binding="{Binding accepted_by}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+
+
+</UserControl>

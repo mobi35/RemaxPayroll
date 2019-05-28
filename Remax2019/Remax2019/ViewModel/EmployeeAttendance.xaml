@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="Remax2019.ViewModel.EmployeeAttendance"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Remax2019.ViewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="1200" d:DesignWidth="1200">
+    <Grid>
+        <DataGrid x:Name="AttendanceGrid"  AutoGenerateColumns="False" IsReadOnly="True" Margin="-10,52,10,380">
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="Background" Value="Gray" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Path=time_out}" >
+                            <Setter Property="Background" Value="LightCoral"/>
+                            <Setter Property="Foreground" Value="Black"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Path=time_in}" >
+                            <Setter Property="Background" Value="LightGreen"/>
+                            <Setter Property="Foreground" Value="Black"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn FontSize="11"  Width="200"    Header="Time in" Binding="{Binding time_in}"/>
+                <DataGridTextColumn FontSize="11" Width="200"    Header="Time out" Binding="{Binding time_out}"/>
+             
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+    </Grid>
+</UserControl>

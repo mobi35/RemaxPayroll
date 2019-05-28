@@ -1,0 +1,101 @@
+﻿<Window x:Class="Remax2019.ViewModel.EmployeePage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Remax2019"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="EmployeePage" Height="900" Width="1300" ResizeMode="NoResize" WindowStyle="None">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="1" Grid.Row="1">
+            <StackPanel x:Name="GridContent"></StackPanel>
+        </Grid>
+
+        <Grid Background="Red" Grid.Column="1" MouseDown="Draggable" >
+            <StackPanel Margin="10,0" Orientation="Horizontal" HorizontalAlignment="Right">
+               
+
+                <Button Width="300" Background="{x:Null}" BorderBrush="{x:Null}"  Padding="5" >
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="User"  />
+
+                        <TextBlock x:Name="user"></TextBlock>
+                    </StackPanel>
+                </Button>
+
+<Button Width="25" Background="{x:Null}" BorderBrush="{x:Null}" Padding="5" Click="Power">
+                    <materialDesign:PackIcon Kind="Logout" />
+                </Button>
+            </StackPanel>
+        </Grid>
+
+
+        <Grid Grid.Row="1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <Image Source="../Assets/top_a3.jpg" Stretch="Fill" Height="120" Margin="0,-30,0,10"/>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Border
+                    BorderBrush="White"
+                    BorderThickness="1"
+                >
+                    <Border.Effect>
+                        <DropShadowEffect />
+                    </Border.Effect>
+                </Border>
+                <StackPanel>
+
+                    <Button   Margin="9"  Background="Red" BorderBrush="Red" Click="Dashboard">Dashboard</Button>
+
+                    <Button   Margin="9"  Background="Red" BorderBrush="Red" Click="EmployeeAttendance">Attendance</Button>
+
+                    <Button   Margin="9"  Background="Red" BorderBrush="Red" Click="EmployeeLoan">Loan</Button>
+
+
+<Button   Margin="9"  Background="Red" BorderBrush="Red" Click="Leave" >
+                        <Grid>
+                            <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="(0)  " x:Name="leaveNotif" HorizontalAlignment="Center"/>
+                                <TextBlock/>
+                            <TextBlock Text="File a leave" x:Name="leaveText" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Grid>
+                    </Button>
+
+
+                    <Button   Margin="9"  Background="Red" BorderBrush="Red" Click="Overtime">
+                        <Grid>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="(0)  " x:Name="overTimeNotif" HorizontalAlignment="Center"/>
+                                <TextBlock/>
+                                <TextBlock Text="Request Overtime" x:Name="overTimeText" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Grid>
+
+                    </Button>
+
+                </StackPanel>
+
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+</Window>
